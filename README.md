@@ -2,6 +2,16 @@
 
 An experimental native Mac app: play Spotify on the MacBook Pro and send the same Spotify audio to a Mac mini on the same home network. Both Macs use timestamped, delayed playback. No Spotify credentials, virtual audio driver, cloud server, or extra Spotify player is used.
 
+## Platform support
+
+| Platform | Main Spotify player | Receiver | Status |
+| --- | --- | --- | --- |
+| macOS (Apple silicon) | Yes, Spotify-only capture | Yes | Working on the original Macs; v0.2 crackle fix confirmed by the user |
+| [Windows 11](Windows/README.md) | Yes, requires routing Spotify to a silent output | Yes | x64/ARM64 builds; portable audio/protocol tests pass; Windows hardware testing pending |
+| [iPhone/iPad](iOS/README.md) | No | Native receiver project | Simulator build verified; real-device signing/testing needed |
+
+The Mac app remains in the repository root. Windows and iOS setup/build instructions are in the linked platform folders.
+
 ## Requirements
 
 - Two Apple silicon Macs running macOS 14.2 or later on the same private network.

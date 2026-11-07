@@ -5,3 +5,8 @@ backups/
 .impeccable/
 PRODUCT.md
 DESIGN.md
+**/bin/
+**/obj/
+**/xcuserdata/
+*.xcuserstate
+*.xcarchive/

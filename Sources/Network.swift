@@ -86,6 +86,7 @@ struct ClockSync {
     }
 }
 
+#if os(macOS)
 final class Session {
     let queue = DispatchQueue(label: "roomaudio.session", qos: .userInteractive)
     let audioQueue = DispatchQueue(label: "roomaudio.playback", qos: .userInteractive)
@@ -270,3 +271,5 @@ final class Session {
         clock = ClockSync(); outstanding.removeAll()
     }
 }
+
+#endif

@@ -1,14 +1,19 @@
 import Foundation
+#if os(macOS)
 import CoreAudio
+#endif
 import AVFoundation
 
+#if os(macOS)
 func checked(_ status: OSStatus, _ operation: String) throws {
     if status != noErr { throw NSError(domain: "RoomAudio", code: Int(status), userInfo: [NSLocalizedDescriptionKey: "\(operation) failed (\(status)). Check System Settings → Privacy & Security → System Audio Recording, then reopen RoomAudio."]) }
 }
+#endif
 func audioError(_ message: String) -> NSError { NSError(domain: "RoomAudio", code: 1, userInfo: [NSLocalizedDescriptionKey: message]) }
 func now() -> Double { AVAudioTime.seconds(forHostTime: mach_absolute_time()) }
 func ticks(_ seconds: Double) -> UInt64 { AVAudioTime.hostTime(forSeconds: max(0, seconds)) }
 
+#if os(macOS)
 struct SpotifyProcesses {
     static func includes(bundle: String) -> Bool {
         bundle == "com.spotify.client" || bundle.hasPrefix("com.spotify.client.")
@@ -156,6 +161,8 @@ final class Capture {
     }
     deinit { stop() }
 }
+
+#endif
 
 struct PlaybackTimeline {
     var anchor: Double?
