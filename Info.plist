@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0"><dict>
+<key>CFBundleExecutable</key><string>RoomAudio</string>
+<key>CFBundleIdentifier</key><string>local.roomaudio.app</string>
+<key>CFBundleName</key><string>RoomAudio</string>
+<key>CFBundlePackageType</key><string>APPL</string>
+<key>CFBundleShortVersionString</key><string>0.2</string>
+<key>CFBundleVersion</key><string>2</string>
+<key>LSMinimumSystemVersion</key><string>14.2</string>
+<key>NSHighResolutionCapable</key><true/>
+<key>NSAudioCaptureUsageDescription</key><string>RoomAudio captures Spotify audio only and plays it on this Mac and your paired Mac mini over your home network.</string>
+<key>NSLocalNetworkUsageDescription</key><string>RoomAudio connects your MacBook Pro and Mac mini to share Spotify audio over your home Wi-Fi.</string>
+</dict></plist>
